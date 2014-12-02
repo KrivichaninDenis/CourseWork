@@ -1,0 +1,10 @@
+c:\users\кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\bin\Debug\Курсач.exe.config
+c:\users\кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\bin\Debug\Курсач.exe
+c:\users\кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\bin\Debug\Курсач.pdb
+c:\users\кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\obj\Debug\Курсач.csprojResolveAssemblyReference.cache
+c:\users\кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\obj\Debug\Курсач.Form1.resources
+c:\users\кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\obj\Debug\Курсач.Properties.Resources.resources
+c:\users\кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\obj\Debug\Курсач.csproj.GenerateResource.Cache
+c:\users\кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\obj\Debug\Курсач.exe
+c:\users\кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\obj\Debug\Курсач.pdb
+c:\users\кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\obj\Debug\Курсач.Add.resources

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<XmlSave xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Task>
+    <id>0</id>
+    <minutes>1</minutes>
+    <hour>1</hour>
+    <day>18</day>
+    <month>12</month>
+    <year>2014</year>
+    <Title>a</Title>
+    <Description>a</Description>
+    <Performer>a</Performer>
+    <Status>Planned</Status>
+    <Tags>
+      <string />
+      <string>a1</string>
+      <string />
+      <string>a2</string>
+    </Tags>
+  </Task>
+  <Task>
+    <id>1</id>
+    <minutes>5</minutes>
+    <hour>5</hour>
+    <day>28</day>
+    <month>12</month>
+    <year>2014</year>
+    <Title>b</Title>
+    <Description>b</Description>
+    <Performer>b</Performer>
+    <Status>Planned</Status>
+    <Tags>
+      <string />
+      <string>b1</string>
+      <string />
+      <string>b2</string>
+    </Tags>
+  </Task>
+  <Task>
+    <id>2</id>
+    <minutes>4</minutes>
+    <hour>4</hour>
+    <day>13</day>
+    <month>12</month>
+    <year>2014</year>
+    <Title>c</Title>
+    <Description>c</Description>
+    <Performer>c</Performer>
+    <Status>Planned</Status>
+    <Tags>
+      <string />
+      <string>c1</string>
+      <string />
+      <string>c2</string>
+    </Tags>
+  </Task>
+</XmlSave>

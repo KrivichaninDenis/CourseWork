@@ -1,0 +1,10 @@
+C:\Users\Кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\bin\Debug\Курсач.exe.config
+C:\Users\Кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\bin\Debug\Курсач.exe
+C:\Users\Кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\bin\Debug\Курсач.pdb
+C:\Users\Кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\obj\Debug\TaskManager.csproj.GenerateResource.Cache
+C:\Users\Кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\obj\Debug\Курсач.exe
+C:\Users\Кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\obj\Debug\Курсач.pdb
+C:\Users\Кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\obj\Debug\TaskManager.Form1.resources
+C:\Users\Кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\obj\Debug\TaskManager.Add.resources
+C:\Users\Кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\obj\Debug\TaskManager.Properties.Resources.resources
+C:\Users\Кривичанин\documents\visual studio 2012\Projects\Курсач\Курсач\obj\Debug\TaskManager.csprojResolveAssemblyReference.cache
