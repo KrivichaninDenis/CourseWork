@@ -11,28 +11,30 @@ using System.Windows.Forms;
 namespace TaskManager
 {
     public partial class Add : Form
-    { 
+    {
+        public bool IsAdded { get; protected set; }
         public Add()
         {
-            InitializeComponent();           
+            InitializeComponent();
+            IsAdded = false;
         }
-        public Task tsk1 = new Task();
+        public Task task1 = new Task();
 
-        public Add(Task task1)
+        public Add(Task task)
         {
             InitializeComponent();
-            textBox1.Text = task1.Title;
-            textBox2.Text = task1.Description;
-            textBox3.Text = task1.Performer;
-            textBox5.Text = task1.hour.ToString();
-            textBox6.Text = task1.minutes.ToString();
-            textBox4.Text=task1.ToString();
+            tbTitle.Text = task.Title;
+            tbDescription.Text = task.Description;
+            tbPerformer.Text = task.Performer;
+            tbHour.Text = task.hour.ToString();
+            tbMinutes.Text = task.minutes.ToString();
+            tbData.Text=task.ToString();
 
 
-            richTextBox1.Text = tsk1.TegsToString(task1.Tags);
-            
-            tsk1.Tags.Clear();
-            tsk1 = task1;
+            rtbTags.Text = task.TegsToString(task.Tags);
+            task.Tags.Clear();
+
+            task1 = task;
         }
 
         private void Add_Load(object sender, EventArgs e)
@@ -45,40 +47,40 @@ namespace TaskManager
         }
 
         
-        
+        //Buttons
         private  void button1_Click(object sender, EventArgs e)
         {
+           
             
-            
-            if (textBox5.Text.Length > 0 && textBox6.Text.Length > 0)
+            if (tbHour.Text.Length > 0 && tbMinutes.Text.Length > 0)
             {
-                tsk1.hour = int.Parse(textBox5.Text);
-                tsk1.minutes = int.Parse(textBox6.Text);
+                task1.hour = int.Parse(tbHour.Text);
+                task1.minutes = int.Parse(tbMinutes.Text);
             }
-            tsk1.Title = textBox1.Text;
-            tsk1.Description = textBox2.Text;
-            tsk1.Performer = textBox3.Text;
+            task1.Title = tbTitle.Text;
+            task1.Description = tbDescription.Text;
+            task1.Performer = tbPerformer.Text;
             
-            tsk1.day = monthCalendar1.SelectionRange.End.Day.ToString();
-            tsk1.month = monthCalendar1.SelectionRange.End.Month.ToString();
-            tsk1.year = monthCalendar1.SelectionRange.End.Year.ToString();
+            task1.day = monthCalendar1.SelectionRange.End.Day.ToString();
+            task1.month = monthCalendar1.SelectionRange.End.Month.ToString();
+            task1.year = monthCalendar1.SelectionRange.End.Year.ToString();
 
-            string TegsString = richTextBox1.Text;
-            string[] split = TegsString.Split(new Char[] { '\n','#',' ' });
+            string TegsString = rtbTags.Text;
+            string[] split = TegsString.Split(new Char[] {'#'});
 
-            tsk1.Tags.Clear();
+            task1.Tags.Clear();
             foreach (string s in split)
             {
-                tsk1.Tags.Add(s);
+                task1.Tags.Add(s);
             }
         
-            textBox4.Text = tsk1.ToString();
+            tbData.Text = task1.ToString();
 
-            tsk1.Status = CheckStatus(tsk1);
+            task1.Status = CheckStatus(task1);
 
-            if (CheckTask(tsk1))
-            {                
-                
+            if (CheckTask(task1))
+            {
+                IsAdded = true;
                 button2.PerformClick();
                 this.Close();
                 
@@ -94,12 +96,10 @@ namespace TaskManager
             {
                 tb.Clear();
             }
-            richTextBox1.Clear();
+            rtbTags.Clear();
         }
-
       
-       
-
+ 
 
        private bool CheckTask(Task tsk)
         {
@@ -108,32 +108,33 @@ namespace TaskManager
             {   
                 if( tb.Text.Length==0) {CheckElement=false;}
             }
-            if (richTextBox1.Text.Length == 0) { CheckElement = false; }
-            if (textBox5.Text.Length > 0 && textBox6.Text.Length > 0)
+            if (rtbTags.Text.Length == 0) { CheckElement = false; }
+            if (tbHour.Text.Length > 0 && tbMinutes.Text.Length > 0)
             {
-                if (!(int.Parse(textBox5.Text) >= 0 && int.Parse(textBox5.Text) < 24) || !(int.Parse(textBox6.Text) >= 0 && int.Parse(textBox6.Text) < 60)) { CheckElement = false; }
+                if (!(int.Parse(tbHour.Text) >= 0 && int.Parse(tbHour.Text) < 24) || !(int.Parse(tbMinutes.Text) >= 0 && int.Parse(tbMinutes.Text) < 60)) { CheckElement = false; }
             }
             else { CheckElement = false; }
             return CheckElement;
         }
 
-       private string CheckStatus(Task tsk)
+       public string CheckStatus(Task tsk)
         { 
            string StatusTask="Lost";
             if (Int32.Parse(tsk.year) > monthCalendar1.TodayDate.Year ||
                  Int32.Parse(tsk.month) > monthCalendar1.TodayDate.Month ||
                  Int32.Parse(tsk.day) > monthCalendar1.TodayDate.Day)
             { StatusTask = "Planned"; }
+            
             return StatusTask;
         }
 
        public Task Retrun_task()
        {
-               return tsk1;                    
+               return task1;                    
        }
 
 
-
+       //Event
        private void textBox5_KeyPress(object sender, KeyPressEventArgs e)
        {
            if (e.KeyChar != ' ' && (e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8)
@@ -150,7 +151,15 @@ namespace TaskManager
            }
        }
 
-       
+       private void Add_FormClosing(object sender, FormClosingEventArgs e)
+       {
+           if (MessageBox.Show("Close panel add a task??", "Close", MessageBoxButtons.YesNo,
+              MessageBoxIcon.Question) == DialogResult.No)
+               e.Cancel = true;
+                
+       }
+
+      
         
     }
 }

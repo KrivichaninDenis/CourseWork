@@ -23,22 +23,22 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbTitle = new System.Windows.Forms.TextBox();
+            this.tbDescription = new System.Windows.Forms.TextBox();
+            this.tbPerformer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbTags = new System.Windows.Forms.RichTextBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.tbData = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.tbHour = new System.Windows.Forms.TextBox();
+            this.tbMinutes = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -61,26 +61,26 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // textBox1
+            // tbTitle
             // 
-            this.textBox1.Location = new System.Drawing.Point(28, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 4;
+            this.tbTitle.Location = new System.Drawing.Point(28, 48);
+            this.tbTitle.Name = "tbTitle";
+            this.tbTitle.Size = new System.Drawing.Size(100, 20);
+            this.tbTitle.TabIndex = 4;
             // 
-            // textBox2
+            // tbDescription
             // 
-            this.textBox2.Location = new System.Drawing.Point(135, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
+            this.tbDescription.Location = new System.Drawing.Point(135, 48);
+            this.tbDescription.Name = "tbDescription";
+            this.tbDescription.Size = new System.Drawing.Size(100, 20);
+            this.tbDescription.TabIndex = 5;
             // 
-            // textBox3
+            // tbPerformer
             // 
-            this.textBox3.Location = new System.Drawing.Point(243, 48);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 6;
+            this.tbPerformer.Location = new System.Drawing.Point(243, 48);
+            this.tbPerformer.Name = "tbPerformer";
+            this.tbPerformer.Size = new System.Drawing.Size(100, 20);
+            this.tbPerformer.TabIndex = 6;
             // 
             // label1
             // 
@@ -116,15 +116,15 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 13);
             this.label5.TabIndex = 14;
-            this.label5.Text = "TEGS";
+            this.label5.Text = "TAGS";
             // 
-            // richTextBox1
+            // rtbTags
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(28, 127);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(228, 106);
-            this.richTextBox1.TabIndex = 15;
-            this.richTextBox1.Text = "";
+            this.rtbTags.Location = new System.Drawing.Point(28, 127);
+            this.rtbTags.Name = "rtbTags";
+            this.rtbTags.Size = new System.Drawing.Size(228, 106);
+            this.rtbTags.TabIndex = 15;
+            this.rtbTags.Text = "";
             // 
             // monthCalendar1
             // 
@@ -132,22 +132,13 @@
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 16;
             // 
-            // label4
+            // tbData
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(356, 88);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 13);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "DATA";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(410, 85);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(119, 20);
-            this.textBox4.TabIndex = 18;
+            this.tbData.Location = new System.Drawing.Point(410, 85);
+            this.tbData.Name = "tbData";
+            this.tbData.ReadOnly = true;
+            this.tbData.Size = new System.Drawing.Size(119, 20);
+            this.tbData.TabIndex = 18;
             // 
             // label6
             // 
@@ -167,21 +158,21 @@
             this.label7.TabIndex = 20;
             this.label7.Text = ":";
             // 
-            // textBox5
+            // tbHour
             // 
-            this.textBox5.Location = new System.Drawing.Point(405, 48);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(36, 20);
-            this.textBox5.TabIndex = 21;
-            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
+            this.tbHour.Location = new System.Drawing.Point(405, 48);
+            this.tbHour.Name = "tbHour";
+            this.tbHour.Size = new System.Drawing.Size(36, 20);
+            this.tbHour.TabIndex = 21;
+            this.tbHour.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
-            // textBox6
+            // tbMinutes
             // 
-            this.textBox6.Location = new System.Drawing.Point(463, 48);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(36, 20);
-            this.textBox6.TabIndex = 22;
-            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
+            this.tbMinutes.Location = new System.Drawing.Point(463, 48);
+            this.tbMinutes.Name = "tbMinutes";
+            this.tbMinutes.Size = new System.Drawing.Size(36, 20);
+            this.tbMinutes.TabIndex = 22;
+            this.tbMinutes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox6_KeyPress);
             // 
             // label8
             // 
@@ -193,31 +184,43 @@
             this.label8.TabIndex = 23;
             this.label8.Text = "Please, write all tegs with \'#\'";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(356, 88);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 13);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "DATA";
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(541, 325);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.tbMinutes);
+            this.Controls.Add(this.tbHour);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.tbData);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.rtbTags);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbPerformer);
+            this.Controls.Add(this.tbDescription);
+            this.Controls.Add(this.tbTitle);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.MinimizeBox = false;
             this.Name = "Add";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Add_FormClosing);
             this.Load += new System.EventHandler(this.Add_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -228,21 +231,21 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbTitle;
+        private System.Windows.Forms.TextBox tbDescription;
+        private System.Windows.Forms.TextBox tbPerformer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbTags;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox tbData;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox tbHour;
+        private System.Windows.Forms.TextBox tbMinutes;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label4;
     }
 }
