@@ -15,12 +15,9 @@ namespace TaskManager
         public static List<Task> AddElement(List<Task> Tasks1)
         {
             Add AddForm = new Add();
-            AddForm.Show();
-
-            if (AddForm.IsAdded)
-            {
-                Tasks1.Add(AddForm.Retrun_task());
-            }
+            AddForm.Show();            
+            Tasks1.Add(AddForm.Return_task());
+            
             return Tasks1;
         }
 
@@ -72,7 +69,7 @@ namespace TaskManager
         {
             Add AddForm = new Add(tasks[int.Parse(dgv.CurrentRow.Cells[6].Value.ToString())]);
             AddForm.Show();
-            tasks[int.Parse(dgv.CurrentRow.Cells[6].Value.ToString())] = AddForm.Retrun_task();
+            tasks[int.Parse(dgv.CurrentRow.Cells[6].Value.ToString())] = AddForm.Return_task();
             return tasks;
         }
 
@@ -116,12 +113,13 @@ namespace TaskManager
         {
             List<string> StrTegslist = new List<string>();
 
-            string[] split = StringTegs.Split(new Char[] { ' ','#' });
-
+            string[] split = StringTegs.Split(' ');
+            
             foreach (string s in split)
             {
                 StrTegslist.Add(s);
             }
+             
             bool check = false;
             foreach (string StrTgsList in StrTegslist)
             {

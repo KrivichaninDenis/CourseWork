@@ -33,7 +33,6 @@ namespace TaskManager
             }
             return MainString;
         }
-
         public override string ToString()
         {
             return String.Format(hour + ":" + minutes + " " + day + "." + month + "." + year);

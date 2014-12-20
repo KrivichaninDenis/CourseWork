@@ -12,11 +12,12 @@ namespace TaskManager
 {
     public partial class Add : Form
     {
-        public bool IsAdded { get; protected set; }
+
+       
         public Add()
         {
             InitializeComponent();
-            IsAdded = false;
+            
         }
         public Task task1 = new Task();
 
@@ -52,10 +53,10 @@ namespace TaskManager
         {
            
             
-            if (tbHour.Text.Length > 0 && tbMinutes.Text.Length > 0)
+            if (tbHour.Text.Length !=0 && tbMinutes.Text.Length !=0)
             {
-                task1.hour = int.Parse(tbHour.Text);
-                task1.minutes = int.Parse(tbMinutes.Text);
+                task1.hour = int.Parse(tbHour.Text); 
+                task1.minutes = int.Parse(tbMinutes.Text);               
             }
             task1.Title = tbTitle.Text;
             task1.Description = tbDescription.Text;
@@ -66,27 +67,24 @@ namespace TaskManager
             task1.year = monthCalendar1.SelectionRange.End.Year.ToString();
 
             string TegsString = rtbTags.Text;
-            string[] split = TegsString.Split(new Char[] {'#'});
-
+            string[] split = TegsString.Split(' ');
+            
             task1.Tags.Clear();
             foreach (string s in split)
             {
+                
                 task1.Tags.Add(s);
             }
-        
-            tbData.Text = task1.ToString();
-
+            
             task1.Status = CheckStatus(task1);
 
             if (CheckTask(task1))
             {
-                IsAdded = true;
+                tbData.Text = task1.ToString();
                 button2.PerformClick();
-                this.Close();
-                
-               
+                this.Close();                             
             }
-            else MessageBox.Show("Не корректно заполнены", "Error");
+            else MessageBox.Show("Тot correctly Write", "Error");
                         
         }
 
@@ -101,11 +99,12 @@ namespace TaskManager
       
  
 
-       private bool CheckTask(Task tsk)
+       public bool CheckTask(Task tsk)
         {
             bool CheckElement = true;
             foreach(TextBox tb in this.Controls.OfType<TextBox>())
-            {   
+            {
+                if (tb.Name == "tbData") { continue; }
                 if( tb.Text.Length==0) {CheckElement=false;}
             }
             if (rtbTags.Text.Length == 0) { CheckElement = false; }
@@ -128,8 +127,9 @@ namespace TaskManager
             return StatusTask;
         }
 
-       public Task Retrun_task()
+       public Task Return_task()
        {
+              
                return task1;                    
        }
 
@@ -155,8 +155,7 @@ namespace TaskManager
        {
            if (MessageBox.Show("Close panel add a task??", "Close", MessageBoxButtons.YesNo,
               MessageBoxIcon.Question) == DialogResult.No)
-               e.Cancel = true;
-                
+               e.Cancel = true;                         
        }
 
       

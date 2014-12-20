@@ -4,54 +4,68 @@
     <id>0</id>
     <minutes>30</minutes>
     <hour>13</hour>
-    <day>12</day>
+    <day>19</day>
     <month>12</month>
     <year>2014</year>
     <Title>Homework</Title>
     <Description>Make homework</Description>
     <Performer>Mike</Performer>
-    <Status>Planned</Status>
+    <Status>Lost</Status>
     <Tags>
+      <string>#work</string>
+      <string>#school</string>
       <string />
-      <string>work
-</string>
-      <string>school</string>
     </Tags>
   </Task>
   <Task>
     <id>1</id>
     <minutes>10</minutes>
     <hour>12</hour>
-    <day>20</day>
+    <day>19</day>
     <month>12</month>
     <year>2014</year>
     <Title>Meeting</Title>
     <Description>Go to a meeting with relatives</Description>
     <Performer>John</Performer>
-    <Status>Planned</Status>
+    <Status>Lost</Status>
     <Tags>
+      <string>#meeting</string>
+      <string>#relatives</string>
       <string />
-      <string>meeting
-</string>
-      <string>relatives</string>
     </Tags>
   </Task>
   <Task>
     <id>2</id>
     <minutes>20</minutes>
     <hour>6</hour>
-    <day>21</day>
+    <day>19</day>
     <month>12</month>
     <year>2014</year>
     <Title>Trip</Title>
     <Description>Trip to London</Description>
     <Performer>Peter</Performer>
-    <Status>Planned</Status>
+    <Status>Lost</Status>
     <Tags>
+      <string>#trip</string>
+      <string>#London</string>
       <string />
-      <string>trip
-</string>
-      <string>London</string>
+    </Tags>
+  </Task>
+  <Task>
+    <id>3</id>
+    <minutes>0</minutes>
+    <hour>0</hour>
+    <day>19</day>
+    <month>12</month>
+    <year>2014</year>
+    <Title>Summer</Title>
+    <Description>Summer begins</Description>
+    <Performer>I</Performer>
+    <Status>Lost</Status>
+    <Tags>
+      <string>#Summer</string>
+      <string>#Holidays</string>
+      <string />
     </Tags>
   </Task>
 </XmlSave>

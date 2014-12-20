@@ -19,15 +19,13 @@ namespace TaskManager
     {
         public Taskmanager()
         {
-            InitializeComponent();
-
-
+            InitializeComponent();   
         }
 
         public void Form1_Load(object sender, EventArgs e)
         {
             MakeDataGridView();
-
+            dataGridView1.Font = new Font("Rockwell", 9);
             outToolStripMenuItem.Visible = false;
             removeTaskToolStripMenuItem.Visible = false;
             editToolStripMenuItem.Visible = false;
@@ -45,14 +43,14 @@ namespace TaskManager
             dataGridView1.Columns[5].Name = "Tags";
 
             dataGridView1.Columns[6].Name = "Count";
-           dataGridView1.Columns[6].Visible = false;
+            dataGridView1.Columns[6].Visible = false;
 
 
 
         }
 
 
-        List<Task> Tasks = new List<Task>();
+       List<Task> Tasks = new List<Task>();
 
 
         private void addTaskToolStripMenuItem_Click_1(object sender, EventArgs e)
